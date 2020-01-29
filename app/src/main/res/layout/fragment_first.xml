@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppWidget.LinearLayout.Vertical.RootContainer"
+    tools:context=".FirstFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneTIL"
+        style="@style/AppWidget.TextInputLayout.PhoneTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneET"
+            style="@style/AppWidget.TextInputEditText.PhoneTextInputEditText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTIL"
+        style="@style/AppWidget.TextInputLayout.EmailTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailET"
+            style="@style/AppWidget.TextInputEditText.EmailTextInputEditText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTIL"
+        style="@style/AppWidget.TextInputLayout.PasswordTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordET"
+            style="@style/AppWidget.TextInputEditText.PasswordTextInputEditText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_first"
+        style="@style/AppWidget.Button"
+        android:text="@string/next" />
+</LinearLayout>
