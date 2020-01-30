@@ -53,9 +53,11 @@ class WidgetsFragment : Fragment() {
                 val docsTextViews = arrayListOf<View>()
                 view?.findViewsWithText(docsTextViews, "AppWidget", View.FIND_VIEWS_WITH_CONTENT_DESCRIPTION)
                 Log.d(TAG, "Views with AppWidget -> ${docsTextViews.size}")
-                for (v in docsTextViews) {
-                    v.visibility = if (v.visibility == View.GONE) View.VISIBLE else View.GONE
-                }
+                view?.postDelayed({
+                    for (v in docsTextViews) {
+                        v.visibility = if (v.visibility == View.GONE) View.VISIBLE else View.GONE
+                    }
+                }, 5000)
                 true
             }
             else -> super.onOptionsItemSelected(item)
