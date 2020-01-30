@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppWidget.LinearLayout.Vertical"
+    tools:ignore="HardcodedText">
+
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.AppBarLayout" />
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.Toolbar" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/AppWidget.AppBarLayout"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/normalToolbar"
+            style="@style/AppWidget.Toolbar"
+            app:title="Colored/Normal Toolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.AppBarLayout.Light" />
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.Toolbar.Light" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/AppWidget.AppBarLayout.Light"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/lightToolbar"
+            style="@style/AppWidget.Toolbar.Light"
+            app:title="Light Toolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+</LinearLayout>

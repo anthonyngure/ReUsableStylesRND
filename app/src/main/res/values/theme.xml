@@ -7,20 +7,44 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="AppWidget.RelativeLayout" />
 
-    <style name="AppWidget.Space">
-        <item name="android:layout_width">@dimen/activity_vertical_margin</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="AppWidget.ScrollView" />
+
+    <style name="AppWidget.NestedScrollView" />
+
+    <style name="AppWidget.CoordinatorLayout" />
+
+    <style name="AppWidget.TextView" />
+
+    <style name="AppWidget.CheckBox" />
+
+    <style name="AppWidget.LinearLayout" />
+
+    <style name="AppWidget.Switch" />
+
+    <style name="AppWidget.TabItem" />
+
+    <style name="AppWidget.ImageView" />
+
+
+    <style name="AppWidget.NetworkImageView" />
+
+    <style name="AppWidget.CardView">
+        <item name="android:layout_margin">2dp</item>
+        <item name="useCompatPadding">true</item>
+        <item name="cardMaxElevation">4dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="contentPadding">16dp</item>
+        <item name="cardCornerRadius">3dp</item>
     </style>
 
-    <!--region INPUT LAYOUTS-->
-
-    <!--parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"-->
     <style name="AppWidget.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
         <item name="helperTextEnabled">true</item>
+        <item name="hintEnabled">false</item>
         <item name="boxBackgroundColor">@android:color/transparent</item>
         <item name="boxBackgroundMode">outline</item>
         <item name="boxCornerRadiusTopStart">3dp</item>
@@ -50,9 +74,7 @@
         <item name="startIconDrawable">@drawable/ic_lock_black_24dp</item>
     </style>
 
-    <!--endregion-->
-
-    <!--region EDIT TEXTS-->
+    <style name="AppWidget.TextInputLayout.BodyTextInputLayout" />
 
     <style name="AppWidget.TextInputEditText">
         <item name="android:imeOptions">actionNext</item>
@@ -60,9 +82,10 @@
         <item name="android:importantForAutofill" tools:targetApi="o">noExcludeDescendants</item>
         <item name="android:paddingTop">12dp</item>
         <item name="android:paddingBottom">12dp</item>
-        <item name="android:paddingLeft">@dimen/list_row_padding</item>
-        <item name="android:paddingRight">@dimen/list_row_padding</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
         <item name="android:layout_margin">0dp</item>
+        <item name="android:background">@drawable/tingg_input_state_gradient</item>
     </style>
 
     <style name="AppWidget.TextInputEditText.PhoneTextInputEditText">
@@ -81,12 +104,13 @@
         <item name="android:hint">@string/hint_password</item>
     </style>
 
-    <!--endregion-->
-
-    <!--region LINEAR LAYOUTS-->
-
-    <!--Style for all linear layouts - defaults to horizontal just like in the SDK-->
-    <style name="AppWidget.LinearLayout" />
+    <style name="AppWidget.TextInputEditText.BodyTextInputEditText">
+        <item name="android:inputType">textImeMultiLine|textMultiLine</item>
+        <item name="android:hint">@string/hint_body</item>
+        <item name="android:minLines">4</item>
+        <item name="android:maxLines">6</item>
+        <item name="android:imeOptions">actionNext</item>
+    </style>
 
     <!--Style for all vertical linear layouts-->
     <style name="AppWidget.LinearLayout.Vertical">
@@ -98,129 +122,116 @@
         <item name="android:padding">@dimen/activity_vertical_margin</item>
     </style>
 
-    <!--endregion-->
-
-    <!--region TEXT VIEWS-->
-
-    <!--Style for all text views-->
-    <style name="AppWidget.TextView" />
-
-    <style name="AppWidget.TextView.TextCenterTextView">
-        <item name="android:gravity">center</item>
-    </style>
 
     <style name="AppWidget.TextView.SingleLine">
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="AppWidget.TextView.HintTextView">
-        <item name="android:layout_marginBottom">@dimen/list_row_padding</item>
+    <style name="AppWidget.TextView.Title">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppWidget.TextView.SubTitle">
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle2
         </item>
     </style>
 
-    <!--endregion-->
+    <style name="AppWidget.TextView.Body">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body2</item>
+    </style>
 
-    <!--region BUTTONS-->
+    <style name="AppWidget.TextView.InputHint">
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Caption</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
-    <!--App style for all buttons NOTE: All buttons will be un elevated-->
+    <style name="AppWidget.TextView.Docs">
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Caption</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="AppWidget.TextLineView">
+        <item name="tlvLineColor">@color/colorPrimary</item>
+        <item name="tlvTextColor">@color/colorAccent</item>
+        <item name="tlvLineSize">2dp</item>
+    </style>
+
     <style name="AppWidget.Button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?attr/actionBarSize</item>
     </style>
 
-    <!--App style for all app outlined buttons-->
     <style name="AppWidget.Button.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="strokeColor">@color/colorPrimary</item>
     </style>
 
-    <!--App style for all app text button-->
     <style name="AppWidget.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?attr/actionBarSize</item>
     </style>
 
-
-    <!--Style for auth action buttons i.e Login in the register page and Register in the login page-->
-    <style name="AppWidget.Button.OutlinedButton.AuthActionButton">
-        <item name="android:maxLines">1</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
-
-    <!--Style for buttons shown in home screen-->
-    <style name="AppWidget.Button.OutlinedButton.HomeActionButton">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:minHeight">?attr/actionBarSize</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_margin">@dimen/list_row_padding</item>
-        <item name="cornerRadius">25dp</item>
-    </style>
-
-    <style name="AppWidget.Button.TextButton.AccountActionButton">
-        <item name="android:layout_marginBottom">-8dp</item>
-        <item name="android:layout_marginTop">-8dp</item>
-        <item name="android:text">@string/app_name</item>
-        <item name="android:gravity">start|center</item>
-        <item name="iconPadding">@dimen/activity_vertical_margin</item>
-        <item name="cornerRadius">0dp</item>
-        <item name="iconSize">16dp</item>
-    </style>
-
-    <style name="AppWidget.Button.OutlinedButton.RegisterOptionButton">
-        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
-        <item name="android:layout_height">?attr/actionBarSize</item>
-        <item name="android:layout_gravity">end</item>
-        <item name="strokeColor">?attr/colorAccent</item>
-    </style>
-
-    <!--endregion-->
-
-    <!--region LINE VIEWS-->
     <style name="AppWidget.LineView">
-        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_height">1dp</item>
         <item name="android:background">@color/colorDivider</item>
-        <item name="android:layout_marginTop">@dimen/list_row_padding</item>
-        <item name="android:layout_marginBottom">@dimen/list_row_padding</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
     </style>
 
     <style name="AppWidget.LineView.Vertical">
-        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_width">1dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/colorDivider</item>
         <item name="android:layout_marginTop">0dp</item>
         <item name="android:layout_marginBottom">0dp</item>
     </style>
-    <!--endregion-->
 
-    <!--region IMAGE VIEWS-->
-
-    <!--Style for all text views-->
-    <style name="AppWidget.ImageView" />
-    <!--endregion-->
-
-    <!--region LIST ITEMS-->
-
-    <!--App style for list items-->
     <style name="AppWidget.ListItem">
         <item name="android:background">?attr/selectableItemBackground</item>
-        <item name="android:padding">@dimen/list_row_padding</item>
+        <item name="android:padding">8dp</item>
     </style>
 
-    <!--endregion-->
+    <style name="AppWidget.AppBarLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:theme">@style/AppTheme.AppBarOverlay</item>
+        <item name="background">@drawable/tingg_gradient</item>
+    </style>
 
-    <style name="AppWidget.CheckBox" />
 
-    <style name="AppWidget.CheckBox.LabourTypeCheckBox">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_weight">1</item>
+    <style name="AppWidget.AppBarLayout.Light">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:theme">@style/AppTheme.AppBarOverlay.Light</item>
+        <item name="background">@android:color/white</item>
+    </style>
+
+    <style name="AppWidget.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@drawable/tingg_gradient</item>
+        <item name="popupTheme">@style/AppTheme.PopupOverlay</item>
+        <item name="navigationIcon">@drawable/ic_arrow_back_black_24dp</item>
+        <item name="android:navigationIcon">@drawable/ic_arrow_back_black_24dp</item>
+    </style>
+
+    <style name="AppWidget.Toolbar.Light">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="popupTheme">@style/AppTheme.PopupOverlay</item>
     </style>
 
     <style name="AppWidget.TabLayout" parent="@style/Widget.MaterialComponents.TabLayout.Colored">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
         <item name="tabTextAppearance">@style/AppTextAppearance.AppWidget.TabLayout</item>
         <item name="tabIndicatorHeight">5dp</item>
         <!--<item name="tabIndicatorColor">@android:color/white</item>
@@ -228,11 +239,59 @@
         <item name="tabSelectedTextColor">?attr/colorAccent</item>-->
     </style>
 
-    <style name="AppTextAppearance.AppWidget.TabLayout" parent="TextAppearance.Design.Tab">
-        <item name="android:textAllCaps">false</item>
-        <item name="textAllCaps">false</item>
+    <style name="AppWidget.TabLayout.WithGradientBackground">
+        <item name="android:background">@drawable/tingg_gradient</item>
     </style>
 
-    <string name="hint_phone">Phone number</string>
-    <string name="hint_email">Email address</string>
+    <style name="AppTextAppearance.AppWidget.TabLayout" parent="TextAppearance.Design.Tab">
+        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppWidget.FloatingActionButton">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:tint">@android:color/white</item>
+        <item name="tint">@android:color/white</item>
+        <item name="android:layout_margin">@dimen/fab_margin</item>
+    </style>
+
+    <style name="AppWidget.FloatingActionButton.Mini">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:tint">@android:color/white</item>
+        <item name="android:layout_margin">@dimen/fab_margin</item>
+        <item name="fabSize">mini</item>
+    </style>
+
+    <style name="AppWidget.ExtendedFloatingActionButton">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:tint">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="iconTint">@android:color/white</item>
+        <item name="android:layout_margin">@dimen/fab_margin</item>
+    </style>
+
+    <style name="AppWidget.NetworkImageView.Avatar">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="network_image_circled">true</item>
+        <item name="network_image_background">@android:color/white</item>
+        <item name="network_image_borderWidth">.8dp</item>
+        <item name="network_image_borderColor">@color/colorDivider</item>
+    </style>
+
+
+    <style name="AppWidget.NetworkImageView.Avatar.Small">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+    </style>
+
+    <style name="AppWidget.CardView.Avatar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="contentPadding">0dp</item>
+        <item name="cardCornerRadius">0dp</item>
+        <item name="useCompatPadding">false</item>
+    </style>
+
+
 </resources>

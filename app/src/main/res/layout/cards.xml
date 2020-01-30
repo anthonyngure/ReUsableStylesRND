@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppWidget.LinearLayout.Vertical"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:gravity="center_vertical"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.CardView" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/AppWidget.CardView"
+        app:cardCornerRadius="3dp"
+        app:contentPadding="8dp">
+
+        <TextView
+            style="@style/AppWidget.TextView.Body"
+            android:text="@string/lorem_ipsum" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.CardView.Avatar" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/AppWidget.CardView.Avatar">
+
+        <com.cellulant.tingg.networkimage.NetworkImageView
+            style="@style/AppWidget.NetworkImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:network_image_src="@mipmap/ic_launcher"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

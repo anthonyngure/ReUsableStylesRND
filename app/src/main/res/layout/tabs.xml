@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppWidget.LinearLayout.Vertical"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    tools:ignore="HardcodedText">
+
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TabLayout" />
+
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TabItem" />
+
+    <com.google.android.material.tabs.TabLayout
+        style="@style/AppWidget.TabLayout"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <com.google.android.material.tabs.TabItem
+            style="@style/AppWidget.TabItem"
+            android:text="One" />
+
+        <com.google.android.material.tabs.TabItem
+            style="@style/AppWidget.TabItem"
+            android:text="Two" />
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TabLayout.WithGradientBackground" />
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TabItem" />
+
+    <com.google.android.material.tabs.TabLayout style="@style/AppWidget.TabLayout.WithGradientBackground">
+
+        <com.google.android.material.tabs.TabItem
+            style="@style/AppWidget"
+            android:text="One" />
+
+        <com.google.android.material.tabs.TabItem
+            style="@style/AppWidget"
+            android:text="Two" />
+    </com.google.android.material.tabs.TabLayout>
+
+
+</LinearLayout>

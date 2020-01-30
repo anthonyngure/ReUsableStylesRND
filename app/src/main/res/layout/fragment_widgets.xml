@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppWidget"
+    tools:context=".fragment.WidgetsFragment">
+
+    <LinearLayout
+        style="@style/AppWidget.LinearLayout.Vertical.RootContainer"
+        tools:ignore="HardcodedText">
+
+        <!--Texts-->
+        <com.toshngure.reusablestylesrnd.views.TextLineView
+            style="@style/AppWidget.TextLineView"
+            app:tlvText="Texts" />
+
+        <include layout="@layout/texts" />
+
+        <!--Spaces-->
+        <com.toshngure.reusablestylesrnd.views.TextLineView
+            style="@style/AppWidget.TextLineView"
+            app:tlvText="Inputs" />
+
+        <include layout="@layout/inputs" />
+
+        <!--Toolbars-->
+        <com.toshngure.reusablestylesrnd.views.TextLineView
+            style="@style/AppWidget.TextLineView"
+            app:tlvText="Toolbars" />
+
+        <include layout="@layout/toolbars" />
+
+        <!--Tabs-->
+        <com.toshngure.reusablestylesrnd.views.TextLineView
+            style="@style/AppWidget.TextLineView"
+            app:tlvText="Tabs" />
+
+        <include layout="@layout/tabs" />
+
+        <!--Buttons-->
+        <com.toshngure.reusablestylesrnd.views.TextLineView
+            style="@style/AppWidget.TextLineView"
+            app:tlvText="Buttons" />
+
+        <include layout="@layout/buttons" />
+
+        <!--Floating Action Buttons-->
+        <com.toshngure.reusablestylesrnd.views.TextLineView
+            style="@style/AppWidget.TextLineView"
+            app:tlvText="FABs" />
+
+        <include layout="@layout/fabs" />
+
+        <!--Avatars-->
+        <com.toshngure.reusablestylesrnd.views.TextLineView
+            style="@style/AppWidget.TextLineView"
+            app:tlvText="Avatars" />
+
+        <include layout="@layout/avatars" />
+
+        <!--Cards-->
+        <com.toshngure.reusablestylesrnd.views.TextLineView
+            style="@style/AppWidget.TextLineView"
+            app:tlvText="Cards" />
+
+        <include layout="@layout/cards" />
+
+        <!--Check boxes-->
+        <com.toshngure.reusablestylesrnd.views.TextLineView
+            style="@style/AppWidget.TextLineView"
+            app:tlvText="Checkboxes and Switches" />
+
+        <include layout="@layout/checkboxes" />
+
+
+        <!--Separators-->
+        <com.toshngure.reusablestylesrnd.views.TextLineView
+            style="@style/AppWidget.TextLineView"
+            app:tlvText="Separators" />
+
+        <include layout="@layout/separators" />
+
+
+        <Button
+            android:id="@+id/bottomButton"
+            style="@style/AppWidget.Button"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:text="@string/next" />
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

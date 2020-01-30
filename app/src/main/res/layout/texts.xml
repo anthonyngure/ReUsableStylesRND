@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppWidget.LinearLayout.Vertical"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    tools:ignore="HardcodedText">
+
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TextView.Title" />
+
+    <TextView
+        style="@style/AppWidget.TextView.Title"
+        android:text="Title" />
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TextView.SubTitle" />
+
+    <TextView
+        style="@style/AppWidget.TextView.SubTitle"
+        android:text="Sub Title" />
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TextView.InputHint" />
+
+    <TextView
+        style="@style/AppWidget.TextView.InputHint"
+        android:text="Input hint" />
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TextView.Body" />
+
+    <TextView
+        style="@style/AppWidget.TextView.Body"
+        android:text="@string/lorem_ipsum" />
+
+
+</LinearLayout>

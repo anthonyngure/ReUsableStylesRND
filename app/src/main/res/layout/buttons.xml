@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppWidget.LinearLayout.Vertical"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    tools:ignore="HardcodedText">
+
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.Button" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/AppWidget.Button"
+        android:text="Normal button" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/AppWidget.Button"
+        android:enabled="false"
+        android:text="Normal button - disabled" />
+
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.Button.TextButton" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/AppWidget.Button.TextButton"
+        android:text="Text button" />
+
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/AppWidget.Button.TextButton"
+        android:enabled="false"
+        android:text="Text button - disabled" />
+
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.Button.Outlined" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/AppWidget.Button.OutlinedButton"
+        android:text="Outline button" />
+
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/AppWidget.Button.OutlinedButton"
+        android:enabled="false"
+        android:text="Outline button - disabled" />
+
+</LinearLayout>

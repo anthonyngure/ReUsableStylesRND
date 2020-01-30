@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:padding="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context=".SecondFragment">
+    tools:context=".fragment.SecondFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/phoneTIL"
@@ -100,7 +100,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button_second"
+        android:id="@+id/bottomButton"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"

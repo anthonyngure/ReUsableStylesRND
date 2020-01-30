@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppWidget.LinearLayout.Vertical"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:gravity="center"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.NetworkImageView.Avatar" />
+
+    <com.cellulant.tingg.networkimage.NetworkImageView
+        android:id="@+id/normalAvatarNI"
+        style="@style/AppWidget.NetworkImageView.Avatar"
+        android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.NetworkImageView.Avatar.Small" />
+
+    <com.cellulant.tingg.networkimage.NetworkImageView
+        android:id="@+id/smallAvatarNI"
+        style="@style/AppWidget.NetworkImageView.Avatar.Small" />
+
+
+</LinearLayout>

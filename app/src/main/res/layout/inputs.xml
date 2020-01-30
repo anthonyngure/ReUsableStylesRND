@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppWidget.LinearLayout.Vertical"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    tools:ignore="HardcodedText">
+
+    <!--Phone number-->
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TextInputLayout.PhoneTextInputLayout" />
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TextInputEditText.PhoneTextInputEditText" />
+
+
+    <TextView
+        style="@style/AppWidget.TextView.InputHint"
+        android:text="@string/hint_phone" />
+
+    <com.google.android.material.textfield.TextInputLayout style="@style/AppWidget.TextInputLayout.PhoneTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText style="@style/AppWidget.TextInputEditText.PhoneTextInputEditText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Email-->
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TextInputLayout.EmailTextInputLayout" />
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TextInputEditText.EmailTextInputEditText" />
+
+
+    <TextView
+        style="@style/AppWidget.TextView.InputHint"
+        android:text="@string/hint_email" />
+
+    <com.google.android.material.textfield.TextInputLayout style="@style/AppWidget.TextInputLayout.EmailTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText style="@style/AppWidget.TextInputEditText.EmailTextInputEditText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Password-->
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TextInputLayout.PasswordTextInputLayout" />
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TextInputEditText.PasswordTextInputEditText" />
+
+    <TextView
+        style="@style/AppWidget.TextView.InputHint"
+        android:text="@string/hint_password" />
+
+    <com.google.android.material.textfield.TextInputLayout style="@style/AppWidget.TextInputLayout.PasswordTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText style="@style/AppWidget.TextInputEditText.PasswordTextInputEditText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Body-->
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TextInputLayout.BodyTextInputLayout" />
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.TextInputEditText.BodyTextInputEditText" />
+
+    <TextView
+        style="@style/AppWidget.TextView.InputHint"
+        android:text="@string/hint_body" />
+
+    <com.google.android.material.textfield.TextInputLayout style="@style/AppWidget.TextInputLayout.BodyTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText style="@style/AppWidget.TextInputEditText.BodyTextInputEditText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

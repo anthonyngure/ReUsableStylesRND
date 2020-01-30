@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppWidget.LinearLayout.Vertical"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:gravity="center_vertical"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.FloatingActionButton" />
+
+
+    <LinearLayout style="@style/AppWidget.LinearLayout">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/AppWidget.FloatingActionButton"
+            android:src="@drawable/ic_lock_black_24dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/AppWidget.FloatingActionButton"
+            android:enabled="false"
+            android:src="@drawable/ic_lock_black_24dp" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.FloatingActionButton.Mini" />
+
+    <LinearLayout style="@style/AppWidget.LinearLayout">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/AppWidget.FloatingActionButton.Mini"
+            android:src="@drawable/ic_lock_black_24dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/AppWidget.FloatingActionButton.Mini"
+            android:enabled="false"
+            android:src="@drawable/ic_lock_black_24dp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        style="@style/AppWidget.TextView.Docs"
+        android:text="\@style/AppWidget.ExtendedFloatingActionButton" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        style="@style/AppWidget.ExtendedFloatingActionButton"
+        android:text="Extended fab"
+        app:icon="@drawable/ic_lock_black_24dp" />
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        style="@style/AppWidget.ExtendedFloatingActionButton"
+        android:enabled="false"
+        android:text="Extended fab - disabled"
+        app:icon="@drawable/ic_lock_black_24dp" />
+
+</LinearLayout>

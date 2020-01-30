@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/AppWidget.LinearLayout.Vertical.RootContainer"
-    tools:context=".FirstFragment">
+    tools:context=".fragment.FirstFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/phoneTIL"
@@ -13,7 +13,6 @@
             style="@style/AppWidget.TextInputEditText.PhoneTextInputEditText" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailTIL"
@@ -36,7 +35,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button_first"
+        android:id="@+id/bottomButton"
         style="@style/AppWidget.Button"
         android:text="@string/next" />
 </LinearLayout>
