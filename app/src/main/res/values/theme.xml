@@ -153,7 +153,8 @@
         <item name="android:layout_marginBottom">4dp</item>
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Caption</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:visibility">visible</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:tag">Docs</item>
     </style>
 
     <style name="AppWidget.TextLineView">

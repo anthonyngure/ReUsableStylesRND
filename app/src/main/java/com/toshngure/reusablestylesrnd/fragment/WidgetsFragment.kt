@@ -1,10 +1,9 @@
 package com.toshngure.reusablestylesrnd.fragment
 
 import android.os.Bundle
+import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.toshngure.reusablestylesrnd.GlideApp
@@ -16,6 +15,12 @@ import kotlinx.android.synthetic.main.avatars.*
  * A simple [Fragment] subclass.
  */
 class WidgetsFragment : Fragment() {
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +39,31 @@ class WidgetsFragment : Fragment() {
         val pdslUrl = "https://mula.co.ke/mula_ke/api/v1/images/services/KPLC_BuyTokens.png"
         normalAvatarNI.fetchImage(GlideApp.with(this).load(pdslUrl))
         smallAvatarNI.fetchImage(GlideApp.with(this).load(pdslUrl))
+    }
+
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu_widgets_fragment, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_toggle_docs -> {
+                val docsTextViews = arrayListOf<View>()
+                view?.findViewsWithText(docsTextViews, "AppWidget", View.FIND_VIEWS_WITH_CONTENT_DESCRIPTION)
+                Log.d(TAG, "Views with AppWidget -> ${docsTextViews.size}")
+                for (v in docsTextViews) {
+                    v.visibility = if (v.visibility == View.GONE) View.VISIBLE else View.GONE
+                }
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    companion object {
+        const val TAG = "WidgetsFragment"
     }
 
 }
